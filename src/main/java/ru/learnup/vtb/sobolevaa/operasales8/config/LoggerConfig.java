@@ -22,7 +22,7 @@ public class LoggerConfig {
 //        return new ConsoleLogger();
 //    }
 
-    @Value("${logger.type:default}")
+    @Value("${init-parameters.logger.type:default}")
     private String typeLogger = null;
 
     @Bean

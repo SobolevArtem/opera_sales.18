@@ -14,9 +14,6 @@ public class ConsoleLogger implements Logger {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
-    public static void main(String[] args) {
-        System.out.println(ANSI_RED + "This text is red!" + ANSI_RESET);
-    }
     @Override
     public void print(Object obj) {
         System.out.println(obj.toString());

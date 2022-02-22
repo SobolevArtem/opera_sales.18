@@ -1,5 +1,27 @@
-logger:
-  #type: email
-  type: console
+init-parameters:
+  logger:
+    #type: email
+    type: console
 
+  notifier:
+    type: not-email
+    address: aasobolev@rambler.ru
 
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tema.sobolev@gmail.com # логин от учётки Google
+    password: "22wrcgvdvdvmaqhuyz" # специальный пароль для приложения (см. Google Account)
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+        debug: false

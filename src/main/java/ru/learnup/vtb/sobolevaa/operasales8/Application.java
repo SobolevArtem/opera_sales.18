@@ -23,11 +23,6 @@ public class Application {
 //		emailService.sendMsg("tema.sobolev@gmail.com", "Welcome", "This is a welcome email for your!!", "c:\\1.txt");
 
 		events.addEvent("Травиата", "Джузеппе Верди", null,20,18);
-		events.buy("Травиата", 12);
-		events.getEvent("Травиата").getSeats().sellAny(3);
-		events.editEvent("Травиата",null, null, null,33);
-		events.deleteEvent("Травиата");
-
 //		events.addEvent("Кармен", "Жорж Бизе", null,30,16);
 //		events.addEvent("Евгений Онегин", "П. И. Чайковский", null,5,6);
 //		events.getEvent("Травиата").getSeats().buyAny(12);

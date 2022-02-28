@@ -34,9 +34,6 @@ public class MainConfig {
             JavaMailSenderImpl mailSenderImpl = new JavaMailSenderImpl();
             return new EmailNotifier(mailSenderImpl);
         }
-        if (typeNotifier.equals("console")) {
-            return new ConsoleNotifier();
-        }
         return new EmptyNotifier();
     }
 

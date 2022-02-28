@@ -1,7 +1,5 @@
 package ru.learnup.vtb.sobolevaa.operasales8.services;
 
-import org.springframework.stereotype.Component;
-import ru.learnup.vtb.sobolevaa.operasales8.model.Loggable;
 import ru.learnup.vtb.sobolevaa.operasales8.model.Seat;
 import ru.learnup.vtb.sobolevaa.operasales8.services.interfaces.Logger;
 
@@ -13,6 +11,7 @@ public class SeatService {
     private final SortedMap<Integer, Seat> occupied = new TreeMap<>();
     private final SortedMap<Integer, Seat> free = new TreeMap<>();
     private final Logger logger;
+
 
     public SeatService(Logger logger, Integer count) {
         for (Integer i = 0; i < count; i++) {
@@ -51,7 +50,6 @@ public class SeatService {
         }
     }
 
-    @Loggable
     public void sellAny(Integer count){
         if (occupiedSize()>=count) {
             for (int i = 0; i < count; i++){

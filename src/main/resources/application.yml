@@ -4,8 +4,7 @@ init-parameters:
     type: console
 
   notifier:
-    #type: email
-    type: console
+    type: not-email
     address: aasobolev@rambler.ru
 
 spring:
@@ -13,7 +12,7 @@ spring:
     host: smtp.gmail.com
     port: 587
     username: tema.sobolev@gmail.com # логин от учётки Google
-    password: "afrdeqlsucujxeoa" # специальный пароль для приложения (см. Google Account)
+    password: "22wrcgvdvdvmaqhuyz" # специальный пароль для приложения (см. Google Account)
     properties:
       mail:
         transport:

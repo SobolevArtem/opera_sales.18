@@ -1,6 +1,7 @@
 package ru.learnup.vtb.sobolevaa.operasales8.services;
 
 import ru.learnup.vtb.sobolevaa.operasales8.model.Event;
+import ru.learnup.vtb.sobolevaa.operasales8.model.Loggable;
 import ru.learnup.vtb.sobolevaa.operasales8.services.interfaces.Logger;
 
 import java.time.LocalDateTime;
@@ -15,11 +16,13 @@ public class EventService {
         this.logger = logger;
     }
 
+    @Loggable
     public void addEvent(String name, String description, LocalDateTime date, Integer count, Integer ageLimit){
         events.put(name, new Event(logger, name, description, date, count, ageLimit));
         logger.print(String.format("Мероприятие %s добавлено!", name));
     }
 
+    @Loggable
     public void editEvent(String name, String description, LocalDateTime date, Integer count, Integer ageLimit){
         final Event event = getEvent(name);
         if (event == null) {
@@ -44,6 +47,12 @@ public class EventService {
         events.remove(name);
         logger.print(String.format("Мероприятие %s удалено!", name));
     }
+
+    @Loggable
+    public void buy(String name, Integer number){
+        getEvent(name).getSeats().buy(number);
+    }
+
 
     public Event getEvent(String name){
         return events.get(name);

@@ -1,5 +1,6 @@
 package ru.learnup.vtb.sobolevaa.operasales8.services;
 
+import ru.learnup.vtb.sobolevaa.operasales8.model.Loggable;
 import ru.learnup.vtb.sobolevaa.operasales8.services.interfaces.Logger;
 
 public class ConsoleLogger implements Logger {
